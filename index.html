@@ -8,6 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
   <script>
     tailwind.config = {
       theme: {
@@ -350,7 +351,7 @@
     <p class="font-medium">
       <i class="fas fa-star text-secondary mr-2"></i>
       Trusted by 1 Lakh+ Indians | 100% Natural & Safe | Free Shipping on
-      Orders Above ₹499
+      every Orders
       <i class="fas fa-star text-secondary ml-2"></i>
     </p>
   </div>
@@ -377,7 +378,7 @@
 
         <div class="flex items-center space-x-4">
           <!-- Made cart button functional with click handler -->
-          <button id="cartBtn" class="text-xl relative text-primary hover:text-accent transition">
+          <button hidden id="cartBtn" class="text-xl relative text-primary hover:text-accent transition">
             <i class="fas fa-shopping-cart"></i>
             <span id="cartCount"
               class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">0</span>
@@ -417,10 +418,7 @@
           class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
           <i class="fas fa-info-circle mr-3"></i>About Us
         </a>
-        <a href="#wellness"
-          class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
-          <i class="fas fa-spa mr-3"></i>Wellness
-        </a>
+    
         <a href="#products"
           class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
           <i class="fas fa-box mr-3"></i>Products
@@ -498,10 +496,10 @@
                     Natural wellness solutions backed by Ayurveda and modern
                     science
                   </p>
-                  <button
+                  <a href="#products"
                     class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    Shop Now <i class="fas fa-arrow-right ml-2"></i>
-                  </button>
+                    Explore Products <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
                 </div>
                 <div class="hidden md:flex justify-center animate-fadeIn delay-300">
                   <img src="images/about img.jpeg" alt="Wellness Products"
@@ -529,10 +527,10 @@
                   <p class="text-gray-700 text-lg mb-6">
                     Herbal formulations for vitality, immunity, and balance
                   </p>
-                  <button
+                  <a href="#products"
                     class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     Explore Products <i class="fas fa-arrow-right ml-2"></i>
-                  </button>
+                  </a>
                 </div>
                 <div class="hidden md:flex justify-center animate-fadeIn delay-300">
                   <img src="/placeholder.svg?height=350&width=350" alt="Herbal Products"
@@ -552,7 +550,7 @@
                 <div class="animate-slideInLeft">
                   <span
                     class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4">
-                    Special Offer
+                    100% Safe
                   </span>
                   <h1 class="text-3xl md:text-5xl font-bold text-primary-dark mb-4 leading-tight">
                     Nature Meets Wellness
@@ -560,10 +558,10 @@
                   <p class="text-gray-700 text-lg mb-6">
                     Premium quality supplements for a healthier, happier you
                   </p>
-                  <button
+                  <a href="#products"
                     class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    Get Started <i class="fas fa-arrow-right ml-2"></i>
-                  </button>
+                    Explore Products <i class="fas fa-arrow-right ml-2"></i>
+                  </a>
                 </div>
                 <div class="hidden md:flex justify-center animate-fadeIn delay-300">
                   <img src="/placeholder.svg?height=350&width=350" alt="Natural Products"
@@ -754,149 +752,72 @@
   <section id="products" class="container mx-auto px-4 py-16 overflow-hidden">
     <div class="flex justify-between items-center mb-8 animate-fadeInUp">
       <div>
-        <h2 class="text-3xl font-bold text-primary-dark section-title">
-          Our Bestsellers
-        </h2>
+        <h2 class="text-3xl font-bold text-primary-dark section-title">Our Products</h2>
         <p class="text-gray-600 mt-2">Premium wellness solutions</p>
       </div>
-      <a href="#" class="text-secondary hover:text-primary transition font-semibold flex items-center">
-        View All <i class="fas fa-arrow-right ml-2"></i>
-      </a>
+
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-4 gap-6">
+
       <!-- Product 1 -->
-      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
         <div class="relative">
-          <img src="/images/womenwellness.jpeg" alt="Klemens Women Wellness" class="w-full h-48 object-contain p-4" />
-          <span class="badge-discount absolute top-3 right-3">-30%</span>
+          <img src="images/womenwellness.jpeg" alt="Klemens Women Wellness" class="w-full h-48 object-contain p-4" />
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-primary-dark mb-2">
-            Klemens – Women Wellness
-          </h3>
-          <p class="text-sm text-gray-500 mb-2">Herbal Health Supplement</p>
-          <div class="flex items-center justify-between mb-3">
-            <span class="text-xl font-bold text-primary">₹699</span>
-            <span class="text-sm text-gray-400 line-through">₹999</span>
-          </div>
-          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg"
-            data-name="Klemens Women Wellness" data-price="699" data-image="/images/klemens-women-wellness.png">
-            Add to Cart
-          </button>
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-primary-dark text-lg">Klemens – Women Wellness</h3>
+          <p class="text-sm text-gray-600 mt-2">Herbal Health Supplement for women's daily care & hormonal balance.</p>
         </div>
       </div>
 
       <!-- Product 2 -->
-      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
         <div class="relative">
-          <img src="/images/liquid drops.jpeg" alt="Best Shilajit Ever" class="w-full h-48 object-contain p-4" />
-          <span class="badge-discount absolute top-3 right-3">-25%</span>
+          <img src="images/liquid drops.jpeg" alt="Best Shilajit Ever" class="w-full h-48 object-contain p-4" />
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-primary-dark mb-2">
-            Best Shilajit Ever
-          </h3>
-          <p class="text-sm text-gray-500 mb-2">Liquid Drops</p>
-          <div class="flex items-center justify-between mb-3">
-            <span class="text-xl font-bold text-primary">₹899</span>
-            <span class="text-sm text-gray-400 line-through">₹1,199</span>
-          </div>
-          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg" data-name="Best Shilajit Ever"
-            data-price="899" data-image="/images/best-shilajit.png">
-            Add to Cart
-          </button>
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-primary-dark text-lg">Best Shilajit Ever</h3>
+          <p class="text-sm text-gray-600 mt-2">Premium liquid Shilajit for stamina, strength & immunity support.</p>
         </div>
       </div>
 
       <!-- Product 3 -->
-      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
         <div class="relative">
-          <img src="/images/sea buckthorn.jpeg" alt="Sea Buckthorn" class="w-full h-48 object-contain p-4" />
-          <span class="badge-discount absolute top-3 right-3">-40%</span>
+          <img src="images/sea buckthorn.jpeg" alt="Sea Buckthorn" class="w-full h-48 object-contain p-4" />
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-primary-dark mb-2">Sea Buckthorn</h3>
-          <p class="text-sm text-gray-500 mb-2">Dietary Supplement</p>
-          <div class="flex items-center justify-between mb-3">
-            <span class="text-xl font-bold text-primary">₹749</span>
-            <span class="text-sm text-gray-400 line-through">₹1,249</span>
-          </div>
-          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg" data-name="Sea Buckthorn"
-            data-price="749" data-image="/images/sea-buckthorn.png">
-            Add to Cart
-          </button>
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-primary-dark text-lg">Sea Buckthorn</h3>
+          <p class="text-sm text-gray-600 mt-2">Rich in antioxidants for skin repair & digestive wellness.</p>
         </div>
       </div>
 
       <!-- Product 4 -->
-      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
         <div class="relative">
-          <img src="/images/diabetic care.jpeg" alt="Diabetic Care Liquid" class="w-full h-48 object-contain p-4" />
-          <span class="badge-discount absolute top-3 right-3">-35%</span>
+          <img src="images/diabetic care.jpeg" alt="Diabetic Care Liquid" class="w-full h-48 object-contain p-4" />
         </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-primary-dark mb-2">
-            Diabetic Care Liquid
-          </h3>
-          <p class="text-sm text-gray-500 mb-2">Ayurvedic Ingredients</p>
-          <div class="flex items-center justify-between mb-3">
-            <span class="text-xl font-bold text-primary">₹799</span>
-            <span class="text-sm text-gray-400 line-through">₹1,299</span>
-          </div>
-          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg" data-name="Diabetic Care Liquid"
-            data-price="799" data-image="/images/diabetic-care.png">
-            Add to Cart
-          </button>
+        <div class="p-4 text-center">
+          <h3 class="font-semibold text-primary-dark text-lg">Diabetic Care Liquid</h3>
+          <p class="text-sm text-gray-600 mt-2">Ayurvedic formula for sugar control & metabolic improvement.</p>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Featured Banner -->
-  <section class="container mx-auto px-4 py-8">
-    <div
-      class="bg-gradient-to-br from-primary via-accent to-primary-dark rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp">
-      <div class="grid md:grid-cols-2 gap-8 p-8 md:p-12 items-center">
-        <div class="text-white order-2 md:order-1">
-          <span class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4">
-            SEASON'S SPECIAL
-          </span>
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Liver & Liver Detox Capsules
-          </h2>
-          <p class="mb-6 text-gray-100 leading-relaxed">
-            Natural liver cleanse and support formula with milk thistle and
-            artichoke extract. Supports healthy liver function and natural
-            detoxification.
-          </p>
-          <div class="flex items-baseline mb-6">
-            <span class="text-4xl font-bold">₹899</span>
-            <span class="text-2xl line-through ml-4 opacity-70">₹1,499</span>
-            <span class="ml-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Save 40%</span>
-          </div>
-          <button
-            class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            SHOP NOW <i class="fas fa-arrow-right ml-2"></i>
-          </button>
-        </div>
-        <div class="flex justify-center order-1 md:order-2">
-          <img src="/placeholder.svg?height=350&width=350" alt="Featured Product"
-            class="h-72 md:h-80 object-contain drop-shadow-2xl" />
-        </div>
-      </div>
-    </div>
-  </section>
+
+
 
   <!-- Testimonials Slider -->
   <section id="testimonials" class="py-16 bg-white overflow-hidden">
     <div class="container mx-auto px-4">
       <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold text-primary-dark">
-          Patient Testimonials
+          Doctors Feedback
         </h2>
-        <p class="text-gray-600 mt-2">What patients say about <span class="font-semibold text-secondary">Dr.
-            Damini</span></p>
+        <p class="text-gray-600 mt-2">Trusted & Recommended by Medical Experts</p>
       </div>
 
       <!-- Swiper Container -->
@@ -906,61 +827,87 @@
           <!-- Testimonial 1 -->
           <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
+              <img src="https://i.pinimg.com/1200x/cc/e1/92/cce192c8bdcdb218078ea39493f6d161.jpg"
+                class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Riya Sahu</h4>
+                <h4 class="font-bold text-primary-dark">🩺 Dr. Neha Sharma</h4>
+                <span class="text-gray-500 text-xs">Dermatologist</span><br>
                 <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "Skin treatment by Dr. Damini has worked like magic! My acne has reduced and skin looks clearer now."
+              "Product quality is impressive and skin friendly. I personally recommend it to my patients for regular
+              use."
             </p>
-            <span class="text-xs text-gray-500">2 weeks ago</span>
+            <span class="text-xs text-gray-500">1 month ago</span>
           </div>
 
           <!-- Testimonial 2 -->
           <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
+              <img src="https://i.pinimg.com/736x/34/2c/c7/342cc740feca7cc553c51d1c035e1516.jpg"
+                class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Neha Verma</h4>
+                <h4 class="font-bold text-primary-dark">🩺 Dr. Vivek Verma</h4>
+                <span class="text-gray-500 text-xs">Cardiologist</span><br>
                 <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "Doctor is very polite and explains everything properly. My pigmentation improved within a month!"
+              "Trusted quality & safe ingredients. Results are notable within a short time. Highly recommended."
             </p>
-            <span class="text-xs text-gray-500">1 month ago</span>
+            <span class="text-xs text-gray-500">3 weeks ago</span>
           </div>
 
           <!-- Testimonial 3 -->
           <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
+              <img src="https://i.pinimg.com/736x/59/8c/80/598c809632f9de89259c069ef1d9bee8.jpg"
+                class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Pooja Mehta</h4>
+                <h4 class="font-bold text-primary-dark">🩺 Dr. Radhika Mehta</h4>
+                <span class="text-gray-500 text-xs">Gynecologist</span><br>
                 <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "Laser hair removal session was painless & effective. Results look amazing. Highly recommended!"
+              "Safe to use and excellent quality. Patient feedback is positive. Good for long-term use."
             </p>
-            <span class="text-xs text-gray-500">3 weeks ago</span>
+            <span class="text-xs text-gray-500">2 months ago</span>
           </div>
 
           <!-- Testimonial 4 -->
           <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
+              <img src="https://i.pinimg.com/736x/cc/08/04/cc0804622adf87d5bc093694fc9f1c9f.jpg"
+                class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Sunita Patel</h4>
+                <h4 class="font-bold text-primary-dark">🩺 Dr. Sunita Das</h4>
+                <span class="text-gray-500 text-xs">Pediatrician</span><br>
                 <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "My daughter had scar treatment & results are clearly visible. Dr. Damini handles with care."
+              "Packaging is premium and product feels authentic. I appreciate the quality control and purity standard."
             </p>
-            <span class="text-xs text-gray-500">5 days ago</span>
+            <span class="text-xs text-gray-500">5 weeks ago</span>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
+            <div class="flex items-center mb-4">
+              <img src="https://i.pinimg.com/736x/f6/2a/0b/f62a0b5e0552976f2b8144f7f4a0a24d.jpg"
+                class="w-14 h-14 rounded-full border-2 border-secondary" />
+              <div class="ml-4">
+                <h4 class="font-bold text-primary-dark">🩺 Dr. Ankit Rao</h4>
+                <span class="text-gray-500 text-xs">General Physician</span><br>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
+              </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-3">
+              "One of the best products in this category. Effective results observed in multiple users."
+            </p>
+            <span class="text-xs text-gray-500">4 days ago</span>
           </div>
 
         </div>
@@ -968,9 +915,11 @@
         <!-- Navigation Arrows -->
         <div class="swiper-button-next text-secondary font-bold"></div>
         <div class="swiper-button-prev text-secondary font-bold"></div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Newsletter Section -->
   <section class="py-16 bg-gradient-to-br from-cream to-secondary-light">
@@ -1057,27 +1006,6 @@
           </ul>
         </div>
 
-        <!-- Categories -->
-        <div>
-          <h3 class="text-lg font-bold mb-4 text-secondary">Categories</h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="#" class="text-gray-300 hover:text-secondary transition">Vitality</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 hover:text-secondary transition">Energy</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 hover:text-secondary transition">Immunity</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 hover:text-secondary transition">Balance</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 hover:text-secondary transition">Wellness</a>
-            </li>
-          </ul>
-        </div>
 
         <!-- Contact Info -->
         <div>
@@ -1088,12 +1016,8 @@
               <span class="text-gray-300 text-sm">Jaipur, Rajasthan, India</span>
             </li>
             <li class="flex items-center">
-              <i class="fas fa-phone text-secondary mr-3"></i>
-              <span class="text-gray-300 text-sm">+91 XXXXX XXXXX</span>
-            </li>
-            <li class="flex items-center">
               <i class="fas fa-envelope text-secondary mr-3"></i>
-              <span class="text-gray-300 text-sm">info@orgivio.com</span>
+              <span class="text-gray-300 text-sm">contact@orgivioorganics.com</span>
             </li>
           </ul>
         </div>
@@ -1115,9 +1039,10 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-float" aria-label="Contact on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+  <a href="mailto:contact@orgivioorganics.com" target="_blank" class="whatsapp-float" aria-label="Contact via Email">
+    <i class="fas fa-envelope"></i>
   </a>
+
 
   <!-- Cart Sidebar -->
   <div id="cartSidebar"
