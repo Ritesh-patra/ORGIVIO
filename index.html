@@ -1,1578 +1,1268 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orgivio Organics - Nature Meets Wellness</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#2D5F3F",
-              "primary-dark": "#1E4029",
-              secondary: "#D4A574",
-              "secondary-light": "#E8D4B8",
-              accent: "#4A8B5C",
-              cream: "#FFF8F0",
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orgivio Organics - Nature Meets Wellness</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2D5F3F",
+            "primary-dark": "#1E4029",
+            secondary: "#D4A574",
+            "secondary-light": "#E8D4B8",
+            accent: "#4A8B5C",
+            cream: "#FFF8F0",
           },
         },
-      };
-    </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+      },
+    };
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        overflow-x: hidden;
-      }
+    body {
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+    }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Poppins", sans-serif;
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Poppins", sans-serif;
+    }
 
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #25d366;
-        color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 32px;
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
         box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-        z-index: 1000;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        animation: pulse 2s infinite;
       }
 
-      .whatsapp-float:hover {
-        transform: scale(1.1);
-        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+      50% {
+        box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
 
-      @keyframes pulse {
-        0%,
-        100% {
-          box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-        }
-        50% {
-          box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
       }
 
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes slideInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes slideInRight {
-        from {
-          opacity: 0;
-          transform: translateX(50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes scaleIn {
-        from {
-          opacity: 0;
-          transform: scale(0.9);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      .animate-fadeInUp {
-        animation: fadeInUp 0.6s ease-out forwards;
-      }
-
-      .animate-fadeIn {
-        animation: fadeIn 0.8s ease-out forwards;
-      }
-
-      .animate-slideInLeft {
-        animation: slideInLeft 0.6s ease-out forwards;
-      }
-
-      .animate-slideInRight {
-        animation: slideInRight 0.6s ease-out forwards;
-      }
-
-      .animate-scaleIn {
-        animation: scaleIn 0.5s ease-out forwards;
-      }
-
-      .delay-100 {
-        animation-delay: 0.1s;
-      }
-
-      .delay-200 {
-        animation-delay: 0.2s;
-      }
-
-      .delay-300 {
-        animation-delay: 0.3s;
-      }
-
-      .delay-400 {
-        animation-delay: 0.4s;
-      }
-
-      .delay-500 {
-        animation-delay: 0.5s;
-      }
-
-      .golden-gradient {
-        background: linear-gradient(
-          135deg,
-          #d4a574 0%,
-          #e8c896 50%,
-          #d4a574 100%
-        );
-      }
-
-      .green-gradient {
-        background: linear-gradient(135deg, #2d5f3f 0%, #4a8b5c 100%);
-      }
-
-      .category-icon {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #d4a574 0%, #e8c896 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3);
-        transition: all 0.3s ease;
-        position: relative;
-      }
-
-      .category-icon::before {
-        content: "";
-        position: absolute;
-        inset: -4px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #d4a574 0%, #e8c896 100%);
-        opacity: 0.3;
-        z-index: -1;
-      }
-
-      .category-icon:hover {
-        transform: translateY(-10px) scale(1.05);
-        box-shadow: 0 12px 32px rgba(212, 165, 116, 0.4);
-      }
-
-      .product-card {
-        transition: all 0.3s ease;
-        border: 1px solid #e5e7eb;
-      }
-
-      .product-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-      }
-
-      .swiper-pagination-bullet {
-        background: #d4a574;
-        opacity: 0.5;
-      }
-
-      .swiper-pagination-bullet-active {
-        background: #d4a574;
+      to {
         opacity: 1;
       }
+    }
 
-      .badge-discount {
-        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-        color: white;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 600;
-        box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
       }
 
-      .section-title {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 12px;
-      }
-
-      .section-title::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 4px;
-        background: linear-gradient(90deg, #d4a574 0%, #e8c896 100%);
-        border-radius: 2px;
-      }
-
-      .trust-badge {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
-        padding: 16px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-      }
-
-      .trust-badge:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      }
-
-      .smooth-scroll {
-        scroll-behavior: smooth;
-      }
-
-      /* Mobile Menu Styles */
-      .mobile-menu {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-      }
-
-      .mobile-menu.active {
+      to {
+        opacity: 1;
         transform: translateX(0);
       }
+    }
 
-      /* Prevent body scroll when menu is open */
-      body.menu-open {
-        overflow: hidden;
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
       }
 
-      /* Added horizontal scroll styles for circular photos */
-      .scroll-container {
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
       }
 
-      .scroll-container::-webkit-scrollbar {
-        display: none;
+      to {
+        opacity: 1;
+        transform: scale(1);
       }
+    }
 
-      .expert-photo {
-        display: inline-block;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        border: 3px solid #d4a574;
-        object-fit: cover;
-        transition: all 0.3s ease;
-      }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
 
-      .expert-photo:hover {
-        transform: scale(1.1);
-        border-color: #2d5f3f;
-      }
-      .category-scroll {
-        overflow-x: auto;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE 10+ */
-      }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
 
-      .category-scroll::-webkit-scrollbar {
-        display: none; /* Chrome, Safari */
-      }
-    </style>
-  </head>
-  <body class="bg-cream smooth-scroll">
-    <!-- Added tagline banner above header -->
-    <div
-      class="bg-gradient-to-r from-primary to-accent text-white text-center py-2 px-4 text-sm animate-fadeIn"
-    >
-      <p class="font-medium">
-        <i class="fas fa-star text-secondary mr-2"></i>
-        Trusted by 1 Lakh+ Indians | 100% Natural & Safe | Free Shipping on
-        Orders Above ₹499
-        <i class="fas fa-star text-secondary ml-2"></i>
-      </p>
-    </div>
+    .animate-slideInLeft {
+      animation: slideInLeft 0.6s ease-out forwards;
+    }
 
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50 animate-fadeIn">
-      <div class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <button
-            id="menuBtn"
-            class="text-2xl md:hidden text-primary hover:text-accent transition"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
+    .animate-slideInRight {
+      animation: slideInRight 0.6s ease-out forwards;
+    }
 
-          <div class="flex items-center space-x-3">
-            <img src="images/logo.jpeg" class="w-28 h-16" alt="" />
-          </div>
+    .animate-scaleIn {
+      animation: scaleIn 0.5s ease-out forwards;
+    }
 
-          <nav class="hidden md:flex space-x-8">
-            <a
-              href="#home"
-              class="text-primary hover:text-accent transition font-medium"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="text-primary hover:text-accent transition font-medium"
-              >About</a
-            >
-            <a
-              href="#products"
-              class="text-primary hover:text-accent transition font-medium"
-              >Products</a
-            >
-            <a
-              href="#testimonials"
-              class="text-primary hover:text-accent transition font-medium"
-              >Reviews</a
-            >
-            <a
-              href="#contact"
-              class="text-primary hover:text-accent transition font-medium"
-              >Contact</a
-            >
-          </nav>
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
 
-          <div class="flex items-center space-x-4">
-            <!-- Made cart button functional with click handler -->
-            <button
-              id="cartBtn"
-              class="text-xl relative text-primary hover:text-accent transition"
-            >
-              <i class="fas fa-shopping-cart"></i>
-              <span
-                id="cartCount"
-                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold"
-                >0</span
-              >
-            </button>
-          </div>
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+
+    .golden-gradient {
+      background: linear-gradient(135deg,
+          #d4a574 0%,
+          #e8c896 50%,
+          #d4a574 100%);
+    }
+
+    .green-gradient {
+      background: linear-gradient(135deg, #2d5f3f 0%, #4a8b5c 100%);
+    }
+
+    .category-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4a574 0%, #e8c896 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .category-icon::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4a574 0%, #e8c896 100%);
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .category-icon:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 32px rgba(212, 165, 116, 0.4);
+    }
+
+    .product-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-pagination-bullet {
+      background: #d4a574;
+      opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #d4a574;
+      opacity: 1;
+    }
+
+    .badge-discount {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    }
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #d4a574 0%, #e8c896 100%);
+      border-radius: 2px;
+    }
+
+    .trust-badge {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .trust-badge:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+
+    /* Mobile Menu Styles */
+    .mobile-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    /* Added horizontal scroll styles for circular photos */
+    .scroll-container {
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .expert-photo {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #d4a574;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    .expert-photo:hover {
+      transform: scale(1.1);
+      border-color: #2d5f3f;
+    }
+
+    .category-scroll {
+      overflow-x: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
+
+    .category-scroll::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari */
+    }
+  </style>
+</head>
+
+<body class="bg-cream smooth-scroll">
+  <!-- Added tagline banner above header -->
+  <div class="bg-gradient-to-r from-primary to-accent text-white text-center py-2 px-4 text-sm animate-fadeIn">
+    <p class="font-medium">
+      <i class="fas fa-star text-secondary mr-2"></i>
+      Trusted by 1 Lakh+ Indians | 100% Natural & Safe | Free Shipping on
+      Orders Above ₹499
+      <i class="fas fa-star text-secondary ml-2"></i>
+    </p>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50 animate-fadeIn">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <button id="menuBtn" class="text-2xl md:hidden text-primary hover:text-accent transition">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="flex items-center space-x-3">
+          <img src="images/logo.jpeg" class="w-28 h-16" alt="" />
         </div>
-      </div>
-    </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div
-      id="mobileMenuOverlay"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity"
-    ></div>
-
-    <!-- Mobile Menu -->
-    <div
-      id="mobileMenu"
-      class="mobile-menu fixed left-0 top-0 h-full w-72 bg-white z-50 shadow-2xl"
-    >
-      <div class="p-6">
-        <div class="flex items-center justify-between mb-8">
-          <div class="flex items-center space-x-2">
-            <div
-              class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center"
-            >
-              <i class="fas fa-leaf text-white"></i>
-            </div>
-            <div class="text-sm font-bold">
-              <div class="text-primary">ORGIVIO</div>
-              <div class="text-secondary text-xs">ORGANICS</div>
-            </div>
-          </div>
-          <button
-            id="closeMenu"
-            class="text-2xl text-gray-600 hover:text-primary transition"
-          >
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-
-        <nav class="space-y-4">
-          <a
-            href="#home"
-            class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100"
-          >
-            <i class="fas fa-home mr-3"></i>Home
-          </a>
-          <a
-            href="#about"
-            class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100"
-          >
-            <i class="fas fa-info-circle mr-3"></i>About Us
-          </a>
-          <a
-            href="#wellness"
-            class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100"
-          >
-            <i class="fas fa-spa mr-3"></i>Wellness
-          </a>
-          <a
-            href="#products"
-            class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100"
-          >
-            <i class="fas fa-box mr-3"></i>Products
-          </a>
-          <a
-            href="#testimonials"
-            class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100"
-          >
-            <i class="fas fa-star mr-3"></i>Reviews
-          </a>
-          <a
-            href="#contact"
-            class="block text-lg text-primary hover:text-accent transition font-medium py-2"
-          >
-            <i class="fas fa-envelope mr-3"></i>Contact
-          </a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="text-primary hover:text-accent transition font-medium">Home</a>
+          <a href="#about" class="text-primary hover:text-accent transition font-medium">About</a>
+          <a href="#products" class="text-primary hover:text-accent transition font-medium">Products</a>
+          <a href="#testimonials" class="text-primary hover:text-accent transition font-medium">Reviews</a>
+          <a href="#contact" class="text-primary hover:text-accent transition font-medium">Contact</a>
         </nav>
+
+        <div class="flex items-center space-x-4">
+          <!-- Made cart button functional with click handler -->
+          <button id="cartBtn" class="text-xl relative text-primary hover:text-accent transition">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount"
+              class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenuOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity"></div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu fixed left-0 top-0 h-full w-72 bg-white z-50 shadow-2xl">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-8">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+            <i class="fas fa-leaf text-white"></i>
+          </div>
+          <div class="text-sm font-bold">
+            <div class="text-primary">ORGIVIO</div>
+            <div class="text-secondary text-xs">ORGANICS</div>
+          </div>
+        </div>
+        <button id="closeMenu" class="text-2xl text-gray-600 hover:text-primary transition">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="space-y-4">
+        <a href="#home"
+          class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
+          <i class="fas fa-home mr-3"></i>Home
+        </a>
+        <a href="#about"
+          class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
+          <i class="fas fa-info-circle mr-3"></i>About Us
+        </a>
+        <a href="#wellness"
+          class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
+          <i class="fas fa-spa mr-3"></i>Wellness
+        </a>
+        <a href="#products"
+          class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
+          <i class="fas fa-box mr-3"></i>Products
+        </a>
+        <a href="#testimonials"
+          class="block text-lg text-primary hover:text-accent transition font-medium py-2 border-b border-gray-100">
+          <i class="fas fa-star mr-3"></i>Reviews
+        </a>
+        <a href="#contact" class="block text-lg text-primary hover:text-accent transition font-medium py-2">
+          <i class="fas fa-envelope mr-3"></i>Contact
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Swiper Slider -->
+  <section id="home" class="container mx-auto px-4 pb-6">
+    <!-- Categories / Benefits Section -->
+    <div class="mt-2 mb-6 bg-white rounded-2xl shadow-lg p-4 overflow-hidden">
+      <div class="category-scroll flex gap-4 pb-2 sm:grid sm:grid-cols-5 sm:gap-8 justify-items-center">
+        <div class="category-item text-center shrink-0">
+          <img src="images/viality.jpeg" class="expert-photo mb-2 mx-auto" />
+          <p class="text-sm font-medium text-primary w-20 text-center">
+            Vitality
+          </p>
+        </div>
+
+        <div class="category-item text-center shrink-0">
+          <img src="images/energy.jpeg" class="expert-photo mb-2 mx-auto" />
+          <p class="text-sm font-medium text-primary w-20 text-center">
+            Energy
+          </p>
+        </div>
+
+        <div class="category-item text-center shrink-0">
+          <img src="images/immunity.jpeg" class="expert-photo mb-2 mx-auto" />
+          <p class="text-sm font-medium text-primary w-20 text-center">
+            Immunity
+          </p>
+        </div>
+
+        <div class="category-item text-center shrink-0">
+          <img src="images/balance.jpeg" class="expert-photo mb-2 mx-auto" />
+          <p class="text-sm font-medium text-primary w-20 text-center">
+            Balance
+          </p>
+        </div>
+
+        <div class="category-item text-center shrink-0">
+          <img src="images/wellness.jpeg" class="expert-photo mb-2 mx-auto" />
+          <p class="text-sm font-medium text-primary w-20 text-center">
+            Wellness
+          </p>
+        </div>
       </div>
     </div>
 
-    <!-- Hero Swiper Slider -->
-    <section id="home" class="container mx-auto px-4 pb-6">
-      <!-- Categories / Benefits Section -->
-      <div class="mt-2 mb-6 bg-white rounded-2xl shadow-lg p-4 overflow-hidden">
-        <div
-          class="category-scroll flex gap-4 pb-2 sm:grid sm:grid-cols-5 sm:gap-8 justify-items-center"
-        >
-          <div class="category-item text-center shrink-0">
-            <img src="images/viality.jpeg" class="expert-photo mb-2 mx-auto" />
-            <p class="text-sm font-medium text-primary w-20 text-center">
-              Vitality
-            </p>
-          </div>
-
-          <div class="category-item text-center shrink-0">
-            <img src="images/energy.jpeg" class="expert-photo mb-2 mx-auto" />
-            <p class="text-sm font-medium text-primary w-20 text-center">
-              Energy
-            </p>
-          </div>
-
-          <div class="category-item text-center shrink-0">
-            <img src="images/immunity.jpeg" class="expert-photo mb-2 mx-auto" />
-            <p class="text-sm font-medium text-primary w-20 text-center">
-              Immunity
-            </p>
-          </div>
-
-          <div class="category-item text-center shrink-0">
-            <img src="images/balance.jpeg" class="expert-photo mb-2 mx-auto" />
-            <p class="text-sm font-medium text-primary w-20 text-center">
-              Balance
-            </p>
-          </div>
-
-          <div class="category-item text-center shrink-0">
-            <img src="images/wellness.jpeg" class="expert-photo mb-2 mx-auto" />
-            <p class="text-sm font-medium text-primary w-20 text-center">
-              Wellness
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper heroSwiper rounded-2xl overflow-hidden shadow-xl">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div
-              class="relative bg-gradient-to-br from-orange-100 via-orange-50 to-secondary-light h-[400px] md:h-[500px] flex items-center"
-            >
-              <div class="container mx-auto px-8 md:px-16">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                  <div class="animate-slideInLeft">
-                    <span
-                      class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4"
-                    >
-                      Trusted by 1 Lakh+ Indians
-                    </span>
-                    <h1
-                      class="text-3xl md:text-5xl font-bold text-primary-dark mb-4 leading-tight"
-                    >
-                      Your Well Being is Our Priority
-                    </h1>
-                    <p class="text-gray-700 text-lg mb-6">
-                      Natural wellness solutions backed by Ayurveda and modern
-                      science
-                    </p>
-                    <button
-                      class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                    >
-                      Shop Now <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                  </div>
-                  <div
-                    class="hidden md:flex justify-center animate-fadeIn delay-300"
-                  >
-                    <img
-                      src="images/about img.jpeg"
-                      alt="Wellness Products"
-                      class="h-80 object-contain drop-shadow-2xl"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div
-              class="relative bg-gradient-to-br from-green-50 via-cream to-secondary-light h-[400px] md:h-[500px] flex items-center"
-            >
-              <div class="container mx-auto px-8 md:px-16">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                  <div class="animate-slideInLeft">
-                    <span
-                      class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4"
-                    >
-                      100% Natural
-                    </span>
-                    <h1
-                      class="text-3xl md:text-5xl font-bold text-primary-dark mb-4 leading-tight"
-                    >
-                      Boost Your Natural Energy Level
-                    </h1>
-                    <p class="text-gray-700 text-lg mb-6">
-                      Herbal formulations for vitality, immunity, and balance
-                    </p>
-                    <button
-                      class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                    >
-                      Explore Products <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                  </div>
-                  <div
-                    class="hidden md:flex justify-center animate-fadeIn delay-300"
-                  >
-                    <img
-                      src="/placeholder.svg?height=350&width=350"
-                      alt="Herbal Products"
-                      class="h-80 object-contain drop-shadow-2xl"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <div
-              class="relative bg-gradient-to-br from-yellow-50 via-cream to-orange-100 h-[400px] md:h-[500px] flex items-center"
-            >
-              <div class="container mx-auto px-8 md:px-16">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                  <div class="animate-slideInLeft">
-                    <span
-                      class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4"
-                    >
-                      Special Offer
-                    </span>
-                    <h1
-                      class="text-3xl md:text-5xl font-bold text-primary-dark mb-4 leading-tight"
-                    >
-                      Nature Meets Wellness
-                    </h1>
-                    <p class="text-gray-700 text-lg mb-6">
-                      Premium quality supplements for a healthier, happier you
-                    </p>
-                    <button
-                      class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                    >
-                      Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                  </div>
-                  <div
-                    class="hidden md:flex justify-center animate-fadeIn delay-300"
-                  >
-                    <img
-                      src="/placeholder.svg?height=350&width=350"
-                      alt="Natural Products"
-                      class="h-80 object-contain drop-shadow-2xl"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <!-- Trust Banner -->
-    <section class="container mx-auto px-4 py-8">
-      <div
-        class="bg-gradient-to-r from-primary to-accent rounded-2xl p-6 text-white text-center shadow-xl animate-fadeInUp"
-      >
-        <div class="flex flex-wrap justify-center items-center gap-8">
-          <div class="flex items-center space-x-2">
-            <i class="fas fa-shield-alt text-2xl text-secondary"></i>
-            <span class="font-semibold">100% Safe</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <i class="fas fa-leaf text-2xl text-secondary"></i>
-            <span class="font-semibold">Natural Ingredients</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <i class="fas fa-certificate text-2xl text-secondary"></i>
-            <span class="font-semibold">Certified Quality</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <i class="fas fa-users text-2xl text-secondary"></i>
-            <span class="font-semibold">1 Lakh+ Happy Customers</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="py-16 bg-white overflow-hidden">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="animate-slideInRight">
-            <div class="relative">
-              <div
-                class="absolute -top-6 -left-6 w-32 h-32 bg-secondary rounded-full opacity-20"
-              ></div>
-              <div
-                class="absolute -bottom-6 -right-6 w-40 h-40 bg-primary rounded-full opacity-10"
-              ></div>
-              <img
-                src="images/about img.jpeg"
-                alt="About Orgivio"
-                class="relative rounded-2xl shadow-2xl w-full"
-              />
-            </div>
-          </div>
-          <div class="animate-slideInLeft">
-            <span
-              class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4"
-            >
-              About Us
-            </span>
-            <h2
-              class="text-3xl md:text-4xl font-bold text-primary-dark mb-6 section-title"
-            >
-              Orgivio Organics Private Limited
-            </h2>
-            <p class="text-gray-700 mb-4 leading-relaxed text-justify">
-              At Orgivio Organics Private Limited, we are committed to nurturing
-              health through the power of nature. Rooted in Ayurveda and backed
-              by modern wellness principles, our products are thoughtfully
-              crafted to support a balanced, energetic, and healthy lifestyle.
-            </p>
-            <p class="text-gray-700 mb-4 leading-relaxed text-justify">
-              We believe true wellness begins with purity. That's why Orgivio
-              focuses on high-quality, natural, and herbal ingredients,
-              carefully sourced and formulated to deliver effective, safe, and
-              reliable wellness solutions.
-            </p>
-            <p class="text-gray-700 mb-6 leading-relaxed text-justify">
-              Our range of products—designed for vitality, immunity, balance,
-              and overall well-being reflects our dedication to holistic health
-              for every stage of life. From daily wellness support to
-              specialized care, Orgivio stands for trust, transparency, and
-              nature-inspired innovation.
-            </p>
-            <div class="flex items-center space-x-3">
-              <div
-                class="w-40 h-20 rounded-full bg-secondary flex items-center justify-center"
-              >
-                <img src="images/logo.jpeg" class="w-full h-full object-cover " alt="">
-              </div>
-              <p class="text-primary-dark font-semibold text-lg italic">
-                Orgivio Organics — where nature meets wellness, naturally.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section
-      class="py-16 bg-gradient-to-br from-cream to-secondary-light overflow-hidden"
-    >
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12 animate-fadeInUp">
-          <h2
-            class="text-3xl md:text-4xl font-bold text-primary-dark mb-3 section-title inline-block"
-          >
-            Why Choose Us
-          </h2>
-          <p class="text-gray-600 mt-4">
-            Committed to your health and wellness journey
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Feature 1 -->
-          <div class="trust-badge animate-fadeInUp delay-100">
-            <div
-              class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto"
-            >
-              <i class="fas fa-leaf text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
-              Nature-Driven Formulations
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Crafted with herbal and ayurvedic ingredients inspired by nature
-            </p>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="trust-badge animate-fadeInUp delay-200">
-            <div
-              class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto"
-            >
-              <i class="fas fa-certificate text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
-              Quality You Can Trust
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Every product is developed with a focus on purity, safety, and
-              consistency
-            </p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="trust-badge animate-fadeInUp delay-300">
-            <div
-              class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto"
-            >
-              <i class="fas fa-spa text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
-              Holistic Wellness Approach
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Supporting vitality, immunity, balance, and overall well-being
-            </p>
-          </div>
-
-          <!-- Feature 4 -->
-          <div class="trust-badge animate-fadeInUp delay-400">
-            <div
-              class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto"
-            >
-              <i class="fas fa-flask text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
-              Thoughtfully Crafted Products
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Designed for daily wellness and long-term health support
-            </p>
-          </div>
-
-          <!-- Feature 5 -->
-          <div class="trust-badge animate-fadeInUp delay-500">
-            <div
-              class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto"
-            >
-              <i class="fas fa-heart text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
-              Committed to Better Living
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Dedicated to enhancing your quality of life naturally
-            </p>
-          </div>
-
-          <!-- Feature 6 -->
-          <div class="trust-badge animate-fadeInUp delay-500">
-            <div
-              class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto"
-            >
-              <i class="fas fa-users text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
-              Trusted by Thousands
-            </h3>
-            <p class="text-gray-600 text-center leading-relaxed">
-              Over 1 lakh+ satisfied customers across India
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="container mx-auto px-4 py-16 overflow-hidden">
-      <div class="flex justify-between items-center mb-8 animate-fadeInUp">
-        <div>
-          <h2 class="text-3xl font-bold text-primary-dark section-title">
-            Our Bestsellers
-          </h2>
-          <p class="text-gray-600 mt-2">Premium wellness solutions</p>
-        </div>
-        <a
-          href="#"
-          class="text-secondary hover:text-primary transition font-semibold flex items-center"
-        >
-          View All <i class="fas fa-arrow-right ml-2"></i>
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-4 gap-6">
-        <!-- Product 1 -->
-        <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              src="/images/womenwellness.jpeg"
-              alt="Klemens Women Wellness"
-              class="w-full h-48 object-contain p-4"
-            />
-            <span class="badge-discount absolute top-3 right-3">-30%</span>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-primary-dark mb-2">
-              Klemens – Women Wellness
-            </h3>
-            <p class="text-sm text-gray-500 mb-2">Herbal Health Supplement</p>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xl font-bold text-primary">₹699</span>
-              <span class="text-sm text-gray-400 line-through">₹999</span>
-            </div>
-            <button
-              class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg"
-              data-name="Klemens Women Wellness"
-              data-price="699"
-              data-image="/images/klemens-women-wellness.png"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              src="/images/liquid drops.jpeg"
-              alt="Best Shilajit Ever"
-              class="w-full h-48 object-contain p-4"
-            />
-            <span class="badge-discount absolute top-3 right-3">-25%</span>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-primary-dark mb-2">
-              Best Shilajit Ever
-            </h3>
-            <p class="text-sm text-gray-500 mb-2">Liquid Drops</p>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xl font-bold text-primary">₹899</span>
-              <span class="text-sm text-gray-400 line-through">₹1,199</span>
-            </div>
-            <button
-              class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg"
-              data-name="Best Shilajit Ever"
-              data-price="899"
-              data-image="/images/best-shilajit.png"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              src="/images/sea buckthorn.jpeg"
-              alt="Sea Buckthorn"
-              class="w-full h-48 object-contain p-4"
-            />
-            <span class="badge-discount absolute top-3 right-3">-40%</span>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-primary-dark mb-2">Sea Buckthorn</h3>
-            <p class="text-sm text-gray-500 mb-2">Dietary Supplement</p>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xl font-bold text-primary">₹749</span>
-              <span class="text-sm text-gray-400 line-through">₹1,249</span>
-            </div>
-            <button
-              class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg"
-              data-name="Sea Buckthorn"
-              data-price="749"
-              data-image="/images/sea-buckthorn.png"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              src="/images/diabetic care.jpeg"
-              alt="Diabetic Care Liquid"
-              class="w-full h-48 object-contain p-4"
-            />
-            <span class="badge-discount absolute top-3 right-3">-35%</span>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-primary-dark mb-2">
-              Diabetic Care Liquid
-            </h3>
-            <p class="text-sm text-gray-500 mb-2">Ayurvedic Ingredients</p>
-            <div class="flex items-center justify-between mb-3">
-              <span class="text-xl font-bold text-primary">₹799</span>
-              <span class="text-sm text-gray-400 line-through">₹1,299</span>
-            </div>
-            <button
-              class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg"
-              data-name="Diabetic Care Liquid"
-              data-price="799"
-              data-image="/images/diabetic-care.png"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Banner -->
-    <section class="container mx-auto px-4 py-8">
-      <div
-        class="bg-gradient-to-br from-primary via-accent to-primary-dark rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp"
-      >
-        <div class="grid md:grid-cols-2 gap-8 p-8 md:p-12 items-center">
-          <div class="text-white order-2 md:order-1">
-            <span
-              class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4"
-            >
-              SEASON'S SPECIAL
-            </span>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-              Liver & Liver Detox Capsules
-            </h2>
-            <p class="mb-6 text-gray-100 leading-relaxed">
-              Natural liver cleanse and support formula with milk thistle and
-              artichoke extract. Supports healthy liver function and natural
-              detoxification.
-            </p>
-            <div class="flex items-baseline mb-6">
-              <span class="text-4xl font-bold">₹899</span>
-              <span class="text-2xl line-through ml-4 opacity-70">₹1,499</span>
-              <span
-                class="ml-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold"
-                >Save 40%</span
-              >
-            </div>
-            <button
-              class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              SHOP NOW <i class="fas fa-arrow-right ml-2"></i>
-            </button>
-          </div>
-          <div class="flex justify-center order-1 md:order-2">
-            <img
-              src="/placeholder.svg?height=350&width=350"
-              alt="Featured Product"
-              class="h-72 md:h-80 object-contain drop-shadow-2xl"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-16 bg-white overflow-hidden">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12 animate-fadeInUp">
-          <h2
-            class="text-3xl md:text-4xl font-bold text-primary-dark mb-3 section-title inline-block"
-          >
-            Customer Reviews
-          </h2>
-          <p class="text-gray-600 mt-4">
-            Here's what our customers have to say about us
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Review 1 -->
+    <div class="swiper heroSwiper rounded-2xl overflow-hidden shadow-xl">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
           <div
-            class="bg-cream rounded-xl shadow-lg p-6 hover:shadow-xl transition animate-fadeInUp delay-100"
-          >
+            class="relative bg-gradient-to-br from-orange-100 via-orange-50 to-secondary-light h-[400px] md:h-[500px] flex items-center">
+            <div class="container mx-auto px-8 md:px-16">
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="animate-slideInLeft">
+                  <span
+                    class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                    Trusted by 1 Lakh+ Indians
+                  </span>
+                  <h1 class="text-3xl md:text-5xl font-bold text-primary-dark mb-4 leading-tight">
+                    Your Well Being is Our Priority
+                  </h1>
+                  <p class="text-gray-700 text-lg mb-6">
+                    Natural wellness solutions backed by Ayurveda and modern
+                    science
+                  </p>
+                  <button
+                    class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Shop Now <i class="fas fa-arrow-right ml-2"></i>
+                  </button>
+                </div>
+                <div class="hidden md:flex justify-center animate-fadeIn delay-300">
+                  <img src="images/about img.jpeg" alt="Wellness Products"
+                    class="h-80 object-contain drop-shadow-2xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div
+            class="relative bg-gradient-to-br from-green-50 via-cream to-secondary-light h-[400px] md:h-[500px] flex items-center">
+            <div class="container mx-auto px-8 md:px-16">
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="animate-slideInLeft">
+                  <span
+                    class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                    100% Natural
+                  </span>
+                  <h1 class="text-3xl md:text-5xl font-bold text-primary-dark mb-4 leading-tight">
+                    Boost Your Natural Energy Level
+                  </h1>
+                  <p class="text-gray-700 text-lg mb-6">
+                    Herbal formulations for vitality, immunity, and balance
+                  </p>
+                  <button
+                    class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Explore Products <i class="fas fa-arrow-right ml-2"></i>
+                  </button>
+                </div>
+                <div class="hidden md:flex justify-center animate-fadeIn delay-300">
+                  <img src="/placeholder.svg?height=350&width=350" alt="Herbal Products"
+                    class="h-80 object-contain drop-shadow-2xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div
+            class="relative bg-gradient-to-br from-yellow-50 via-cream to-orange-100 h-[400px] md:h-[500px] flex items-center">
+            <div class="container mx-auto px-8 md:px-16">
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="animate-slideInLeft">
+                  <span
+                    class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                    Special Offer
+                  </span>
+                  <h1 class="text-3xl md:text-5xl font-bold text-primary-dark mb-4 leading-tight">
+                    Nature Meets Wellness
+                  </h1>
+                  <p class="text-gray-700 text-lg mb-6">
+                    Premium quality supplements for a healthier, happier you
+                  </p>
+                  <button
+                    class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Get Started <i class="fas fa-arrow-right ml-2"></i>
+                  </button>
+                </div>
+                <div class="hidden md:flex justify-center animate-fadeIn delay-300">
+                  <img src="/placeholder.svg?height=350&width=350" alt="Natural Products"
+                    class="h-80 object-contain drop-shadow-2xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Trust Banner -->
+  <section class="container mx-auto px-4 py-8">
+    <div
+      class="bg-gradient-to-r from-primary to-accent rounded-2xl p-6 text-white text-center shadow-xl animate-fadeInUp">
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-shield-alt text-2xl text-secondary"></i>
+          <span class="font-semibold">100% Safe</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-leaf text-2xl text-secondary"></i>
+          <span class="font-semibold">Natural Ingredients</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-certificate text-2xl text-secondary"></i>
+          <span class="font-semibold">Certified Quality</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-users text-2xl text-secondary"></i>
+          <span class="font-semibold">1 Lakh+ Happy Customers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-16 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slideInRight">
+          <div class="relative">
+            <div class="absolute -top-6 -left-6 w-32 h-32 bg-secondary rounded-full opacity-20"></div>
+            <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-primary rounded-full opacity-10"></div>
+            <img src="images/about img.jpeg" alt="About Orgivio" class="relative rounded-2xl shadow-2xl w-full" />
+          </div>
+        </div>
+        <div class="animate-slideInLeft">
+          <span class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4">
+            About Us
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6 section-title">
+            Orgivio Organics Private Limited
+          </h2>
+          <p class="text-gray-700 mb-4 leading-relaxed text-justify">
+            At Orgivio Organics Private Limited, we are committed to nurturing
+            health through the power of nature. Rooted in Ayurveda and backed
+            by modern wellness principles, our products are thoughtfully
+            crafted to support a balanced, energetic, and healthy lifestyle.
+          </p>
+          <p class="text-gray-700 mb-4 leading-relaxed text-justify">
+            We believe true wellness begins with purity. That's why Orgivio
+            focuses on high-quality, natural, and herbal ingredients,
+            carefully sourced and formulated to deliver effective, safe, and
+            reliable wellness solutions.
+          </p>
+          <p class="text-gray-700 mb-6 leading-relaxed text-justify">
+            Our range of products—designed for vitality, immunity, balance,
+            and overall well-being reflects our dedication to holistic health
+            for every stage of life. From daily wellness support to
+            specialized care, Orgivio stands for trust, transparency, and
+            nature-inspired innovation.
+          </p>
+          <div class="flex items-center space-x-3">
+            <div class="w-40 h-20 rounded-full bg-secondary flex items-center justify-center">
+              <img src="images/logo.jpeg" class="w-full h-full object-cover " alt="">
+            </div>
+            <p class="text-primary-dark font-semibold text-lg italic">
+              Orgivio Organics — where nature meets wellness, naturally.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-gradient-to-br from-cream to-secondary-light overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 animate-fadeInUp">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-3 section-title inline-block">
+          Why Choose Us
+        </h2>
+        <p class="text-gray-600 mt-4">
+          Committed to your health and wellness journey
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="trust-badge animate-fadeInUp delay-100">
+          <div class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-leaf text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
+            Nature-Driven Formulations
+          </h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Crafted with herbal and ayurvedic ingredients inspired by nature
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="trust-badge animate-fadeInUp delay-200">
+          <div class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-certificate text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
+            Quality You Can Trust
+          </h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Every product is developed with a focus on purity, safety, and
+            consistency
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="trust-badge animate-fadeInUp delay-300">
+          <div class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-spa text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
+            Holistic Wellness Approach
+          </h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Supporting vitality, immunity, balance, and overall well-being
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="trust-badge animate-fadeInUp delay-400">
+          <div class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-flask text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
+            Thoughtfully Crafted Products
+          </h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Designed for daily wellness and long-term health support
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="trust-badge animate-fadeInUp delay-500">
+          <div class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-heart text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
+            Committed to Better Living
+          </h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Dedicated to enhancing your quality of life naturally
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="trust-badge animate-fadeInUp delay-500">
+          <div class="w-16 h-16 rounded-full golden-gradient flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-users text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 text-center">
+            Trusted by Thousands
+          </h3>
+          <p class="text-gray-600 text-center leading-relaxed">
+            Over 1 lakh+ satisfied customers across India
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="container mx-auto px-4 py-16 overflow-hidden">
+    <div class="flex justify-between items-center mb-8 animate-fadeInUp">
+      <div>
+        <h2 class="text-3xl font-bold text-primary-dark section-title">
+          Our Bestsellers
+        </h2>
+        <p class="text-gray-600 mt-2">Premium wellness solutions</p>
+      </div>
+      <a href="#" class="text-secondary hover:text-primary transition font-semibold flex items-center">
+        View All <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-4 gap-6">
+      <!-- Product 1 -->
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="relative">
+          <img src="/images/womenwellness.jpeg" alt="Klemens Women Wellness" class="w-full h-48 object-contain p-4" />
+          <span class="badge-discount absolute top-3 right-3">-30%</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-primary-dark mb-2">
+            Klemens – Women Wellness
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">Herbal Health Supplement</p>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-bold text-primary">₹699</span>
+            <span class="text-sm text-gray-400 line-through">₹999</span>
+          </div>
+          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg"
+            data-name="Klemens Women Wellness" data-price="699" data-image="/images/klemens-women-wellness.png">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="relative">
+          <img src="/images/liquid drops.jpeg" alt="Best Shilajit Ever" class="w-full h-48 object-contain p-4" />
+          <span class="badge-discount absolute top-3 right-3">-25%</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-primary-dark mb-2">
+            Best Shilajit Ever
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">Liquid Drops</p>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-bold text-primary">₹899</span>
+            <span class="text-sm text-gray-400 line-through">₹1,199</span>
+          </div>
+          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg" data-name="Best Shilajit Ever"
+            data-price="899" data-image="/images/best-shilajit.png">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="relative">
+          <img src="/images/sea buckthorn.jpeg" alt="Sea Buckthorn" class="w-full h-48 object-contain p-4" />
+          <span class="badge-discount absolute top-3 right-3">-40%</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-primary-dark mb-2">Sea Buckthorn</h3>
+          <p class="text-sm text-gray-500 mb-2">Dietary Supplement</p>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-bold text-primary">₹749</span>
+            <span class="text-sm text-gray-400 line-through">₹1,249</span>
+          </div>
+          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg" data-name="Sea Buckthorn"
+            data-price="749" data-image="/images/sea-buckthorn.png">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="relative">
+          <img src="/images/diabetic care.jpeg" alt="Diabetic Care Liquid" class="w-full h-48 object-contain p-4" />
+          <span class="badge-discount absolute top-3 right-3">-35%</span>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-primary-dark mb-2">
+            Diabetic Care Liquid
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">Ayurvedic Ingredients</p>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-bold text-primary">₹799</span>
+            <span class="text-sm text-gray-400 line-through">₹1,299</span>
+          </div>
+          <button class="add-to-cart-btn w-full bg-primary text-white py-2 rounded-lg" data-name="Diabetic Care Liquid"
+            data-price="799" data-image="/images/diabetic-care.png">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Banner -->
+  <section class="container mx-auto px-4 py-8">
+    <div
+      class="bg-gradient-to-br from-primary via-accent to-primary-dark rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp">
+      <div class="grid md:grid-cols-2 gap-8 p-8 md:p-12 items-center">
+        <div class="text-white order-2 md:order-1">
+          <span class="inline-block bg-secondary text-primary-dark px-4 py-1 rounded-full text-sm font-semibold mb-4">
+            SEASON'S SPECIAL
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Liver & Liver Detox Capsules
+          </h2>
+          <p class="mb-6 text-gray-100 leading-relaxed">
+            Natural liver cleanse and support formula with milk thistle and
+            artichoke extract. Supports healthy liver function and natural
+            detoxification.
+          </p>
+          <div class="flex items-baseline mb-6">
+            <span class="text-4xl font-bold">₹899</span>
+            <span class="text-2xl line-through ml-4 opacity-70">₹1,499</span>
+            <span class="ml-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Save 40%</span>
+          </div>
+          <button
+            class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            SHOP NOW <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+        <div class="flex justify-center order-1 md:order-2">
+          <img src="/placeholder.svg?height=350&width=350" alt="Featured Product"
+            class="h-72 md:h-80 object-contain drop-shadow-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Slider -->
+  <section id="testimonials" class="py-16 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark">
+          Patient Testimonials
+        </h2>
+        <p class="text-gray-600 mt-2">What patients say about <span class="font-semibold text-secondary">Dr.
+            Damini</span></p>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img
-                src="/placeholder.svg?height=60&width=60"
-                alt="Customer"
-                class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
-              />
+              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Priya Sharma</h4>
-                <div class="text-yellow-400 text-sm">★★★★★</div>
+                <h4 class="font-bold text-primary-dark">Riya Sahu</h4>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "Absolutely love the quality of Orgivio products! The multivitamin
-              has made a real difference in my energy levels. Highly recommend!"
+              "Skin treatment by Dr. Damini has worked like magic! My acne has reduced and skin looks clearer now."
             </p>
             <span class="text-xs text-gray-500">2 weeks ago</span>
           </div>
 
-          <!-- Review 2 -->
-          <div
-            class="bg-cream rounded-xl shadow-lg p-6 hover:shadow-xl transition animate-fadeInUp delay-200"
-          >
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img
-                src="/placeholder.svg?height=60&width=60"
-                alt="Customer"
-                class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
-              />
+              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Rajesh Kumar</h4>
-                <div class="text-yellow-400 text-sm">★★★★★</div>
+                <h4 class="font-bold text-primary-dark">Neha Verma</h4>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "Fast delivery and authentic products. The immunity booster has
-              helped me stay healthy. Great customer service too!"
+              "Doctor is very polite and explains everything properly. My pigmentation improved within a month!"
             </p>
             <span class="text-xs text-gray-500">1 month ago</span>
           </div>
 
-          <!-- Review 3 -->
-          <div
-            class="bg-cream rounded-xl shadow-lg p-6 hover:shadow-xl transition animate-fadeInUp delay-300"
-          >
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img
-                src="/placeholder.svg?height=60&width=60"
-                alt="Customer"
-                class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
-              />
+              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Anita Desai</h4>
-                <div class="text-yellow-400 text-sm">★★★★★</div>
+                <h4 class="font-bold text-primary-dark">Pooja Mehta</h4>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "Best wellness store! All products are genuine and the prices are
-              very reasonable. The liver detox capsules work great!"
+              "Laser hair removal session was painless & effective. Results look amazing. Highly recommended!"
             </p>
             <span class="text-xs text-gray-500">3 weeks ago</span>
           </div>
 
-          <!-- Review 4 -->
-          <div
-            class="bg-cream rounded-xl shadow-lg p-6 hover:shadow-xl transition animate-fadeInUp delay-100"
-          >
+          <!-- Testimonial 4 -->
+          <div class="swiper-slide bg-cream rounded-xl shadow-md p-6">
             <div class="flex items-center mb-4">
-              <img
-                src="/placeholder.svg?height=60&width=60"
-                alt="Customer"
-                class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
-              />
+              <img src="https://via.placeholder.com/60" class="w-14 h-14 rounded-full border-2 border-secondary" />
               <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Vikram Singh</h4>
-                <div class="text-yellow-400 text-sm">★★★★★</div>
+                <h4 class="font-bold text-primary-dark">Sunita Patel</h4>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">
-              "Natural ingredients and effective results. Been using Orgivio
-              products for 3 months now and feel much better overall!"
-            </p>
-            <span class="text-xs text-gray-500">1 week ago</span>
-          </div>
-
-          <!-- Review 5 -->
-          <div
-            class="bg-cream rounded-xl shadow-lg p-6 hover:shadow-xl transition animate-fadeInUp delay-200"
-          >
-            <div class="flex items-center mb-4">
-              <img
-                src="/placeholder.svg?height=60&width=60"
-                alt="Customer"
-                class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
-              />
-              <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Kavita Iyer</h4>
-                <div class="text-yellow-400 text-sm">★★★★★</div>
-              </div>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-3">
-              "Trustworthy brand with excellent products. The ashwagandha
-              supplement has helped reduce my stress significantly!"
-            </p>
-            <span class="text-xs text-gray-500">2 months ago</span>
-          </div>
-
-          <!-- Review 6 -->
-          <div
-            class="bg-cream rounded-xl shadow-lg p-6 hover:shadow-xl transition animate-fadeInUp delay-300"
-          >
-            <div class="flex items-center mb-4">
-              <img
-                src="/placeholder.svg?height=60&width=60"
-                alt="Customer"
-                class="w-14 h-14 rounded-full object-cover border-2 border-secondary"
-              />
-              <div class="ml-4">
-                <h4 class="font-bold text-primary-dark">Suresh Patel</h4>
-                <div class="text-yellow-400 text-sm">★★★★★</div>
-              </div>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-3">
-              "High quality supplements at affordable prices. The vitamin D3 has
-              improved my bone health. Excellent service!"
+              "My daughter had scar treatment & results are clearly visible. Dr. Damini handles with care."
             </p>
             <span class="text-xs text-gray-500">5 days ago</span>
           </div>
+
         </div>
+
+        <!-- Navigation Arrows -->
+        <div class="swiper-button-next text-secondary font-bold"></div>
+        <div class="swiper-button-prev text-secondary font-bold"></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-16 bg-gradient-to-br from-cream to-secondary-light">
-      <div class="container mx-auto px-4">
-        <div
-          class="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-center text-white shadow-2xl animate-scaleIn"
-        >
-          <div class="max-w-2xl mx-auto">
-            <i class="fas fa-envelope text-5xl text-secondary mb-4"></i>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-              Subscribe For Your Daily Dose of Wellness
-            </h2>
-            <p class="mb-8 text-gray-100">
-              Get exclusive offers, health tips, and product updates delivered
-              to your inbox
-            </p>
-            <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                class="flex-1 px-6 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-secondary"
-              />
-              <button
-                class="bg-secondary text-primary-dark px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition whitespace-nowrap shadow-lg hover:shadow-xl"
-              >
-                Subscribe Now
-              </button>
-            </div>
-            <p class="text-xs text-gray-200 mt-4">
-              We respect your privacy. Unsubscribe anytime.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="bg-primary-dark text-white py-12">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8 mb-8">
-          <!-- Company Info -->
-          <div>
-            <div class="flex items-center space-x-3 mb-4">
-              <div
-                class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center"
-              >
-                <i class="fas fa-leaf text-primary text-xl"></i>
-              </div>
-              <div class="text-sm font-bold">
-                <div class="text-white text-lg">ORGIVIO</div>
-                <div class="text-secondary text-xs">ORGANICS</div>
-              </div>
-            </div>
-            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-              Where nature meets wellness, naturally. Premium herbal supplements
-              for holistic health.
-            </p>
-            <div class="flex space-x-3">
-              <a
-                href="#"
-                class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition"
-              >
-                <i class="fab fa-youtube"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h3 class="text-lg font-bold mb-4 text-secondary">Quick Links</h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#home"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#products"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Products</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#testimonials"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Reviews</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Categories -->
-          <div>
-            <h3 class="text-lg font-bold mb-4 text-secondary">Categories</h3>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Vitality</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Energy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Immunity</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Balance</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-300 hover:text-secondary transition"
-                  >Wellness</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div>
-            <h3 class="text-lg font-bold mb-4 text-secondary">Contact Us</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <i class="fas fa-map-marker-alt text-secondary mt-1 mr-3"></i>
-                <span class="text-gray-300 text-sm"
-                  >Jaipur, Rajasthan, India</span
-                >
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-phone text-secondary mr-3"></i>
-                <span class="text-gray-300 text-sm">+91 XXXXX XXXXX</span>
-              </li>
-              <li class="flex items-center">
-                <i class="fas fa-envelope text-secondary mr-3"></i>
-                <span class="text-gray-300 text-sm">info@orgivio.com</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border-t border-gray-600 pt-6">
-          <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 Orgivio Organics Private Limited. All rights reserved.
-            </p>
-            <div class="flex space-x-6 text-sm">
-              <a href="#" class="text-gray-400 hover:text-secondary transition"
-                >Privacy Policy</a
-              >
-              <a href="#" class="text-gray-400 hover:text-secondary transition"
-                >Terms of Service</a
-              >
-              <a href="#" class="text-gray-400 hover:text-secondary transition"
-                >Refund Policy</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <a
-      href="https://wa.me/91XXXXXXXXXX"
-      target="_blank"
-      class="whatsapp-float"
-      aria-label="Contact on WhatsApp"
-    >
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Cart Sidebar -->
-    <div
-      id="cartSidebar"
-      class="fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300"
-    >
-      <div class="flex flex-col h-full">
-        <!-- Cart Header -->
-        <div
-          class="p-6 border-b border-gray-200 bg-gradient-to-r from-primary to-accent"
-        >
-          <div class="flex items-center justify-between">
-            <h2 class="text-2xl font-bold text-white flex items-center">
-              <i class="fas fa-shopping-cart mr-3"></i>
-              Your Cart
-            </h2>
+  <!-- Newsletter Section -->
+  <section class="py-16 bg-gradient-to-br from-cream to-secondary-light">
+    <div class="container mx-auto px-4">
+      <div
+        class="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-center text-white shadow-2xl animate-scaleIn">
+        <div class="max-w-2xl mx-auto">
+          <i class="fas fa-envelope text-5xl text-secondary mb-4"></i>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Subscribe For Your Daily Dose of Wellness
+          </h2>
+          <p class="mb-8 text-gray-100">
+            Get exclusive offers, health tips, and product updates delivered
+            to your inbox
+          </p>
+          <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+            <input type="email" placeholder="Enter your email address"
+              class="flex-1 px-6 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-secondary" />
             <button
-              id="closeCart"
-              class="text-white hover:text-gray-200 text-2xl transition"
-            >
-              <i class="fas fa-times"></i>
+              class="bg-secondary text-primary-dark px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition whitespace-nowrap shadow-lg hover:shadow-xl">
+              Subscribe Now
             </button>
           </div>
-          <p class="text-white text-sm mt-2 opacity-90">Review your items</p>
-        </div>
-
-        <!-- Cart Items -->
-        <div id="cartItems" class="flex-1 overflow-y-auto p-6">
-          <!-- Cart items will be dynamically added here -->
-        </div>
-
-        <!-- Cart Footer -->
-        <div class="border-t border-gray-200 p-6 bg-gray-50">
-          <div class="mb-4">
-            <div class="flex justify-between text-lg font-semibold mb-2">
-              <span class="text-gray-700">Total Items:</span>
-              <span id="totalItems" class="text-primary">0</span>
-            </div>
-            <div class="flex justify-between text-xl font-bold">
-              <span class="text-gray-800">Total Amount:</span>
-              <span id="totalAmount" class="text-accent">₹0</span>
-            </div>
-          </div>
-          <button
-            id="proceedBtn"
-            class="w-full bg-gradient-to-r from-primary to-accent text-white py-4 rounded-xl hover:shadow-lg transition font-bold text-lg flex items-center justify-center space-x-2"
-          >
-            <i class="fab fa-whatsapp text-2xl"></i>
-            <span>Proceed to WhatsApp</span>
-          </button>
+          <p class="text-xs text-gray-200 mt-4">
+            We respect your privacy. Unsubscribe anytime.
+          </p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Cart Overlay -->
-    <div
-      id="cartOverlay"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity"
-    ></div>
+  <!-- Footer -->
+  <footer id="contact" class="bg-primary-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <!-- Company Info -->
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="images/logo.jpeg" class="w-28 h-20 rounded-md" alt="">
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4">
+            Where nature meets wellness, naturally. Premium herbal supplements
+            for holistic health.
+          </p>
+          <div class="flex space-x-3">
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-secondary">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#home" class="text-gray-300 hover:text-secondary transition">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="text-gray-300 hover:text-secondary transition">About Us</a>
+            </li>
+            <li>
+              <a href="#products" class="text-gray-300 hover:text-secondary transition">Products</a>
+            </li>
+            <li>
+              <a href="#testimonials" class="text-gray-300 hover:text-secondary transition">Reviews</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-gray-300 hover:text-secondary transition">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-    <!-- Custom JavaScript -->
-    <script>
-      // Initialize Swiper
-      const heroSwiper = new Swiper(".heroSwiper", {
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true,
-        },
-        speed: 1000,
+        <!-- Categories -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-secondary">Categories</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-gray-300 hover:text-secondary transition">Vitality</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-secondary transition">Energy</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-secondary transition">Immunity</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-secondary transition">Balance</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-secondary transition">Wellness</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-secondary">Contact Us</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-secondary mt-1 mr-3"></i>
+              <span class="text-gray-300 text-sm">Jaipur, Rajasthan, India</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone text-secondary mr-3"></i>
+              <span class="text-gray-300 text-sm">+91 XXXXX XXXXX</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-secondary mr-3"></i>
+              <span class="text-gray-300 text-sm">info@orgivio.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-600 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Orgivio Organics Private Limited. All rights reserved.
+          </p>
+          <div class="flex space-x-6 text-sm">
+            <a href="#" class="text-gray-400 hover:text-secondary transition">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-secondary transition">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-secondary transition">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-float" aria-label="Contact on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Cart Sidebar -->
+  <div id="cartSidebar"
+    class="fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300">
+    <div class="flex flex-col h-full">
+      <!-- Cart Header -->
+      <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-primary to-accent">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold text-white flex items-center">
+            <i class="fas fa-shopping-cart mr-3"></i>
+            Your Cart
+          </h2>
+          <button id="closeCart" class="text-white hover:text-gray-200 text-2xl transition">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <p class="text-white text-sm mt-2 opacity-90">Review your items</p>
+      </div>
+
+      <!-- Cart Items -->
+      <div id="cartItems" class="flex-1 overflow-y-auto p-6">
+        <!-- Cart items will be dynamically added here -->
+      </div>
+
+      <!-- Cart Footer -->
+      <div class="border-t border-gray-200 p-6 bg-gray-50">
+        <div class="mb-4">
+          <div class="flex justify-between text-lg font-semibold mb-2">
+            <span class="text-gray-700">Total Items:</span>
+            <span id="totalItems" class="text-primary">0</span>
+          </div>
+          <div class="flex justify-between text-xl font-bold">
+            <span class="text-gray-800">Total Amount:</span>
+            <span id="totalAmount" class="text-accent">₹0</span>
+          </div>
+        </div>
+        <button id="proceedBtn"
+          class="w-full bg-gradient-to-r from-primary to-accent text-white py-4 rounded-xl hover:shadow-lg transition font-bold text-lg flex items-center justify-center space-x-2">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          <span>Proceed to WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div id="cartOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity"></div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // Initialize Swiper
+    const heroSwiper = new Swiper(".heroSwiper", {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      speed: 1000,
+    });
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+    const body = document.body;
+
+    function openMenu() {
+      mobileMenu.classList.add("active");
+      mobileMenuOverlay.classList.remove("hidden");
+      body.classList.add("menu-open");
+    }
+
+    function closeMenuFunc() {
+      mobileMenu.classList.remove("active");
+      mobileMenuOverlay.classList.add("hidden");
+      body.classList.remove("menu-open");
+    }
+
+    menuBtn.addEventListener("click", openMenu);
+    closeMenu.addEventListener("click", closeMenuFunc);
+    mobileMenuOverlay.addEventListener("click", closeMenuFunc);
+
+    // Close menu when clicking on a link
+    const mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", closeMenuFunc);
+    });
+
+    // Smooth scroll for all links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
       });
+    });
 
-      // Mobile Menu Toggle
-      const menuBtn = document.getElementById("menuBtn");
-      const closeMenu = document.getElementById("closeMenu");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-      const body = document.body;
+    // Add to cart functionality
+    // Cart Management
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-      function openMenu() {
-        mobileMenu.classList.add("active");
-        mobileMenuOverlay.classList.remove("hidden");
-        body.classList.add("menu-open");
-      }
+    // Update cart display
+    function updateCartDisplay() {
+      const cartCount = document.getElementById("cartCount");
+      const cartItems = document.getElementById("cartItems");
+      const totalItems = document.getElementById("totalItems");
+      const totalAmount = document.getElementById("totalAmount");
 
-      function closeMenuFunc() {
-        mobileMenu.classList.remove("active");
-        mobileMenuOverlay.classList.add("hidden");
-        body.classList.remove("menu-open");
-      }
+      // Update cart count
+      const totalQuantity = cart.reduce(
+        (sum, item) => sum + item.quantity,
+        0
+      );
+      cartCount.textContent = totalQuantity;
 
-      menuBtn.addEventListener("click", openMenu);
-      closeMenu.addEventListener("click", closeMenuFunc);
-      mobileMenuOverlay.addEventListener("click", closeMenuFunc);
-
-      // Close menu when clicking on a link
-      const mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
-      mobileMenuLinks.forEach((link) => {
-        link.addEventListener("click", closeMenuFunc);
-      });
-
-      // Smooth scroll for all links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-
-      // Add to cart functionality
-      // Cart Management
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      // Update cart display
-      function updateCartDisplay() {
-        const cartCount = document.getElementById("cartCount");
-        const cartItems = document.getElementById("cartItems");
-        const totalItems = document.getElementById("totalItems");
-        const totalAmount = document.getElementById("totalAmount");
-
-        // Update cart count
-        const totalQuantity = cart.reduce(
-          (sum, item) => sum + item.quantity,
-          0
-        );
-        cartCount.textContent = totalQuantity;
-
-        // Update cart items
-        if (cart.length === 0) {
-          cartItems.innerHTML = `
+      // Update cart items
+      if (cart.length === 0) {
+        cartItems.innerHTML = `
                     <div class="text-center py-12">
                         <i class="fas fa-shopping-cart text-gray-300 text-6xl mb-4"></i>
                         <p class="text-gray-500 text-lg">Your cart is empty</p>
                         <p class="text-gray-400 text-sm mt-2">Add some products to get started!</p>
                     </div>
                 `;
-        } else {
-          cartItems.innerHTML = cart
-            .map(
-              (item, index) => `
+      } else {
+        cartItems.innerHTML = cart
+          .map(
+            (item, index) => `
                     <div class="flex items-center gap-4 mb-4 p-4 bg-white rounded-lg shadow-sm border border-gray-100 animate-fadeInUp">
                         <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded-lg">
                         <div class="flex-1">
@@ -1593,182 +1283,198 @@
                         </button>
                     </div>
                 `
-            )
-            .join("");
-        }
-
-        // Update totals
-        totalItems.textContent = totalQuantity;
-        const total = cart.reduce(
-          (sum, item) => sum + item.price * item.quantity,
-          0
-        );
-        totalAmount.textContent = `₹${total.toLocaleString("en-IN")}`;
-
-        // Save to localStorage
-        localStorage.setItem("cart", JSON.stringify(cart));
+          )
+          .join("");
       }
 
-      // Add to cart
-      document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
-        button.addEventListener("click", function () {
-          const name = this.dataset.name;
-          const price = parseInt(this.dataset.price);
-          const image = this.dataset.image;
+      // Update totals
+      totalItems.textContent = totalQuantity;
+      const total = cart.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+      totalAmount.textContent = `₹${total.toLocaleString("en-IN")}`;
 
-          const existingItem = cart.find((item) => item.name === name);
+      // Save to localStorage
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
 
-          if (existingItem) {
-            existingItem.quantity++;
-          } else {
-            cart.push({ name, price, image, quantity: 1 });
-          }
+    // Add to cart
+    document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const name = this.dataset.name;
+        const price = parseInt(this.dataset.price);
+        const image = this.dataset.image;
 
-          updateCartDisplay();
+        const existingItem = cart.find((item) => item.name === name);
 
-          // Visual feedback
-          this.innerHTML = '<i class="fas fa-check mr-2"></i>Added!';
-          this.classList.add("bg-green-600");
-
-          setTimeout(() => {
-            this.innerHTML = "Add to Cart";
-            this.classList.remove("bg-green-600");
-          }, 1500);
-        });
-      });
-
-      // Update quantity
-      function updateQuantity(index, change) {
-        cart[index].quantity += change;
-
-        if (cart[index].quantity <= 0) {
-          cart.splice(index, 1);
+        if (existingItem) {
+          existingItem.quantity++;
+        } else {
+          cart.push({ name, price, image, quantity: 1 });
         }
 
         updateCartDisplay();
-      }
 
-      // Remove from cart
-      function removeFromCart(index) {
+        // Visual feedback
+        this.innerHTML = '<i class="fas fa-check mr-2"></i>Added!';
+        this.classList.add("bg-green-600");
+
+        setTimeout(() => {
+          this.innerHTML = "Add to Cart";
+          this.classList.remove("bg-green-600");
+        }, 1500);
+      });
+    });
+
+    // Update quantity
+    function updateQuantity(index, change) {
+      cart[index].quantity += change;
+
+      if (cart[index].quantity <= 0) {
         cart.splice(index, 1);
-        updateCartDisplay();
       }
 
-      // Cart sidebar toggle
-      const cartBtn = document.getElementById("cartBtn");
-      const cartSidebar = document.getElementById("cartSidebar");
-      const cartOverlay = document.getElementById("cartOverlay");
-      const closeCart = document.getElementById("closeCart");
-
-      cartBtn.addEventListener("click", () => {
-        cartSidebar.classList.remove("translate-x-full");
-        cartOverlay.classList.remove("hidden");
-      });
-
-      closeCart.addEventListener("click", () => {
-        cartSidebar.classList.add("translate-x-full");
-        cartOverlay.classList.add("hidden");
-      });
-
-      cartOverlay.addEventListener("click", () => {
-        cartSidebar.classList.add("translate-x-full");
-        cartOverlay.classList.add("hidden");
-      });
-
-      document.getElementById("proceedBtn").addEventListener("click", () => {
-        if (cart.length === 0) {
-          alert("Your cart is empty! Please add some products first.");
-          return;
-        }
-
-        // Create WhatsApp message
-        let message = "*New Order from ORGIVIO ORGANICS*\n\n";
-        message += "*Order Details:*\n";
-        message += "━━━━━━━━━━━━━━━━\n\n";
-
-        cart.forEach((item, index) => {
-          message += `${index + 1}. *${item.name}*\n`;
-          message += `   Quantity: ${item.quantity}\n`;
-          message += `   Price: ₹${item.price} each\n`;
-          message += `   Subtotal: ₹${(
-            item.price * item.quantity
-          ).toLocaleString("en-IN")}\n\n`;
-        });
-
-        const total = cart.reduce(
-          (sum, item) => sum + item.price * item.quantity,
-          0
-        );
-        message += "━━━━━━━━━━━━━━━━\n";
-        message += `*Total Amount: ₹${total.toLocaleString("en-IN")}*\n\n`;
-        message += "📦 Please confirm my order!";
-
-        // Encode message for URL
-        const encodedMessage = encodeURIComponent(message);
-
-        // WhatsApp number
-        const whatsappNumber = "919348148310";
-
-        // Create WhatsApp URL
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-        // Open WhatsApp
-        window.open(whatsappURL, "_blank");
-      });
-
-      // Initialize cart display
       updateCartDisplay();
+    }
 
-      // Wishlist functionality
-      const wishlistButtons = document.querySelectorAll(".fa-heart");
-      wishlistButtons.forEach((button) => {
-        button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          this.classList.toggle("far");
-          this.classList.toggle("fas");
-          this.style.color = this.classList.contains("fas") ? "#ef4444" : "";
-        });
+    // Remove from cart
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartDisplay();
+    }
+
+    // Cart sidebar toggle
+    const cartBtn = document.getElementById("cartBtn");
+    const cartSidebar = document.getElementById("cartSidebar");
+    const cartOverlay = document.getElementById("cartOverlay");
+    const closeCart = document.getElementById("closeCart");
+
+    cartBtn.addEventListener("click", () => {
+      cartSidebar.classList.remove("translate-x-full");
+      cartOverlay.classList.remove("hidden");
+    });
+
+    closeCart.addEventListener("click", () => {
+      cartSidebar.classList.add("translate-x-full");
+      cartOverlay.classList.add("hidden");
+    });
+
+    cartOverlay.addEventListener("click", () => {
+      cartSidebar.classList.add("translate-x-full");
+      cartOverlay.classList.add("hidden");
+    });
+
+    document.getElementById("proceedBtn").addEventListener("click", () => {
+      if (cart.length === 0) {
+        alert("Your cart is empty! Please add some products first.");
+        return;
+      }
+
+      // Create WhatsApp message
+      let message = "*New Order from ORGIVIO ORGANICS*\n\n";
+      message += "*Order Details:*\n";
+      message += "━━━━━━━━━━━━━━━━\n\n";
+
+      cart.forEach((item, index) => {
+        message += `${index + 1}. *${item.name}*\n`;
+        message += `   Quantity: ${item.quantity}\n`;
+        message += `   Price: ₹${item.price} each\n`;
+        message += `   Subtotal: ₹${(
+          item.price * item.quantity
+        ).toLocaleString("en-IN")}\n\n`;
       });
 
-      // Newsletter form
-      const newsletterForm = document.querySelector(
-        'input[type="email"]'
-      ).parentElement;
-      const subscribeBtn = newsletterForm.querySelector("button");
+      const total = cart.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+      message += "━━━━━━━━━━━━━━━━\n";
+      message += `*Total Amount: ₹${total.toLocaleString("en-IN")}*\n\n`;
+      message += "📦 Please confirm my order!";
 
-      subscribeBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        const email = newsletterForm.querySelector("input").value;
+      // Encode message for URL
+      const encodedMessage = encodeURIComponent(message);
 
-        if (email && email.includes("@")) {
-          this.textContent = "Subscribed!";
-          this.style.backgroundColor = "#4A8B5C";
-          newsletterForm.querySelector("input").value = "";
+      // WhatsApp number
+      const whatsappNumber = "919348148310";
 
-          setTimeout(() => {
-            this.textContent = "Subscribe Now";
-            this.style.backgroundColor = "";
-          }, 2000);
-        } else {
-          alert("Please enter a valid email address");
-        }
+      // Create WhatsApp URL
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      // Open WhatsApp
+      window.open(whatsappURL, "_blank");
+    });
+
+    // Initialize cart display
+    updateCartDisplay();
+
+    // Wishlist functionality
+    const wishlistButtons = document.querySelectorAll(".fa-heart");
+    wishlistButtons.forEach((button) => {
+      button.addEventListener("click", function (e) {
+        e.stopPropagation();
+        this.classList.toggle("far");
+        this.classList.toggle("fas");
+        this.style.color = this.classList.contains("fas") ? "#ef4444" : "";
       });
+    });
 
-      // Add scroll effect to header
-      let lastScroll = 0;
-      const header = document.querySelector("header");
+    // Newsletter form
+    const newsletterForm = document.querySelector(
+      'input[type="email"]'
+    ).parentElement;
+    const subscribeBtn = newsletterForm.querySelector("button");
 
-      window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset;
+    subscribeBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const email = newsletterForm.querySelector("input").value;
 
-        if (currentScroll > 100) {
-          header.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)";
-        } else {
-          header.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
-        }
+      if (email && email.includes("@")) {
+        this.textContent = "Subscribed!";
+        this.style.backgroundColor = "#4A8B5C";
+        newsletterForm.querySelector("input").value = "";
 
-        lastScroll = currentScroll;
-      });
-    </script>
-  </body>
+        setTimeout(() => {
+          this.textContent = "Subscribe Now";
+          this.style.backgroundColor = "";
+        }, 2000);
+      } else {
+        alert("Please enter a valid email address");
+      }
+    });
+
+    // Add scroll effect to header
+    let lastScroll = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 100) {
+        header.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)";
+      } else {
+        header.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
+      }
+
+      lastScroll = currentScroll;
+    });
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { delay: 2500 },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
 </html>
